@@ -16,8 +16,8 @@ This app was built with `npm create vite@latest . -- --template react-ts`.
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[React Compiler](https://react.dev/learn/react-compiler):** An experimental compiler to optimize React apps.
 - **[Supabase](https://supabase.com/)** Authentication & PostgreSQL Database. 
-- **[Shadcn](https://ui.shadcn.com/)** Frontend UI Library
-- **[FullCalendar](https://fullcalendar.io/)** Calendar
+- **[Shadcn](https://ui.shadcn.com/)** Frontend UI library
+- **[FullCalendar](https://fullcalendar.io/)** Calendar library
 
 
 ## Getting Started
