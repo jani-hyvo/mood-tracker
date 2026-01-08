@@ -11,11 +11,14 @@ This app was built with `npm create vite@latest . -- --template react-ts`.
 
 ## Tech Stack
 
-- **Vite:** A fast frontend build tool.
-- **React:** A library for building user interfaces.
-- **TypeScript:** A typed superset of JavaScript.
-- **ESLint:** For code linting.
-- **React Compiler:** An experimental compiler to optimize React apps.
+- **[Vite](https://vite.dev/)**
+- **[React 19](https://react.dev/blog/2024/12/05/react-19)**
+- **[TypeScript](https://www.typescriptlang.org/)**
+- **[React Compiler](https://react.dev/learn/react-compiler):** An experimental compiler to optimize React apps.
+- **[Supabase](https://supabase.com/) ** Authentication & PostgreSQL Database. 
+- **[Shadcn](https://ui.shadcn.com/) ** Frontend UI Library
+- **[FullCalendar](https://fullcalendar.io/) ** Calendar
+
 
 ## Getting Started
 
