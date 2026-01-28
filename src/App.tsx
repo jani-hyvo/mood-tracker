@@ -3,8 +3,9 @@ import type { Session } from '@supabase/supabase-js';
 
 import { supabase } from './lib/supabaseClient';
 import Auth from './components/Authentication/Auth';
-import MoodTracker from './MoodTracker';
+import MoodTracker from './components/Calendar/MoodTracker';
 import { ThemeProvider } from './components/Theme/theme-provider';
+import Header from './components/Header/Header';
 
 function App() {
   const [session, setSession] = useState<Session | null>(null);
@@ -21,17 +22,12 @@ function App() {
     return () => listener.subscription.unsubscribe();
   }, []);
 
-  useEffect(() => {
-    console.log('session : ', session);
-  }, [session]);
-
-  if (!session) {
-    return <Auth />;
-  }
-
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-      {!session ? <Auth /> : <MoodTracker user={session.user} />}
+      <div className="flex flex-col gap-4">
+        <Header isSignedIn={session !== null} />
+        {!session ? <Auth /> : <MoodTracker user={session.user} />}
+      </div>
     </ThemeProvider>
   );
 }

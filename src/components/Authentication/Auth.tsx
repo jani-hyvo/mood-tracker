@@ -1,6 +1,8 @@
 import { z } from 'zod';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
+import { LogIn } from 'lucide-react';
+import { RotateCcw } from 'lucide-react';
 
 import { supabase } from '@/lib/supabaseClient';
 import {
@@ -75,7 +77,7 @@ export default function Login() {
               </CardAction>
             </CardHeader>
             <CardHeader>
-              <CardTitle>Login to your account</CardTitle>
+              <CardTitle>Login</CardTitle>
               <CardDescription>Enter your credentials below to login</CardDescription>
             </CardHeader>
             <CardContent>
@@ -113,9 +115,11 @@ export default function Login() {
             </CardContent>
             <CardFooter className="flex-col gap-2">
               <Button type="submit" className="w-full">
-                Login
+                <LogIn className="h-4 w-4" />
+                Sign in
               </Button>
               <Button type="reset" variant="outline" className="w-full">
+                <RotateCcw className="h-4 w-4" />
                 Reset
               </Button>
             </CardFooter>

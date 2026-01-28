@@ -1,3 +1,5 @@
+import { LogOut } from 'lucide-react';
+
 import { supabase } from '../../lib/supabaseClient';
 import { Button } from '@/components/shadcn/button';
 
@@ -6,5 +8,10 @@ export function SignOutButton() {
     await supabase.auth.signOut();
   };
 
-  return <Button onClick={signOut}>Sign out</Button>;
+  return (
+    <Button variant="outline" onClick={signOut}>
+      <LogOut />
+      Sign out
+    </Button>
+  );
 }
